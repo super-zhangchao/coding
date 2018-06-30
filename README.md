@@ -241,6 +241,255 @@ mac
 ```markdown
 markdown
 ```
+Google 开源项目风格指南 (中文版)
+
+https://github.com/tobegit3hub?tab=repositories
+
+```
+Elastic Search
+	是一个建立在全文搜索引擎 Apache Lucene? 基础上的搜索引擎。
+```
+```
+RabbitMQ
+	RabbitMQ是一个开源的AMQP实现，服务器端用Erlang语言编写，支持多种客户端，如：Python、Ruby、.NET、Java、JMS、C、PHP、ActionScript、XMPP、STOMP等，支持AJAX。用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。
+```
+C# 写的呼呼的，Keras 跑的溜溜的，Docker也用的熟熟的，ElasticSearch, RabbitMQ, Storm, Spark
+	
+
+机器学习框架
+	分布式
+		
+深度学习框架
+	分布式
+		mxnet
+
+matlab
+	MATLAB: 简单易用的 HPC 语言集成计算、可视化以及编程
+```	
+Anaconda命令
+conda list #该命令，将列出Anaconda安装的所有应用包，我们可以看到Anaconda已经安装了numpy, nose, pip, python, scipy, mingw等等。
+conda install <pkg name> #该命令用于安装应用包，如 conda install numpy.
+pip install <pkg name> #该命令用于安装应用包，如 pip install theano.
+conda update <pkg name> #升级应用包，如 conda update python
+conda install mingw libpython
+pip install theano #安装theano
+```
+numpy
+	shape
+		(100, 10)
+		axis=0 [:][0]
+		axia=1 [][]
+	reshape
+		函数功能：给予数组一个新的形状，而不改变它的数据
+	多维数组
+		如果将三维数组的每一个二维看做一个平面（plane，X[0, :, :], X[1, :, :], X[2, :, :]），三维数组即是这些二维平面层叠（stacked）出来的结果。则（axis=0）表示全部平面上的对应位置，（axis=1），每一个平面的每一列，（axis=2），每一个平面的每一行。
+		假设shape = (100, 10, 20)
+		轴上的操作相当于消去相应的shape值
+			axis = 0 shape = (10, 20)
+			axis = 1 shape = (100, 20)
+			axis = 2 shape = (100, 10)
+		三维数组的轴操作得到二维数组
+		二维数组的轴操作得到一维数组
+		多维数组
+			第0轴代表 第0轴的索引的for循环
+			第1轴代表 第1轴的索引的for循环
+			第2轴代表 第2轴的索引的for循环
+			i,j,k,l,m,n
+				axis=3 相当于 先变化为 i,j,k,m,n,l 后对最后的列表运算
+		二维数组 
+			第0轴的sum max 相当于 每列的sum max 或者 先转置后每行的sum max
+			第1轴的sum max 相当于 每行的sum max
+			行列式矩阵概念
+	加减乘除
+		减法
+			二维数组和一维数组相减 条件 行数相同
+	exp
+	flatten
+	astype(np.int)
+	random
+		randint
+			np.random.randint(0,10) 随机一个数
+		uniform
+
+caffe
+	用于脑回神经网络算法的架构
+theano
+	用于定义、优化以及评估数学公式的 Python 库
+	张量 标量 向量 矩阵 
+	theano安装
+		安装Anaconda
+		安装mingw
+		安装theano
+	theano学习
+		0阶张量叫标量(scarlar)；1阶张量叫向量(vector)；2阶张量叫矩阵(matrix)
+		lscalar int64
+		theano.tensor
+			mean 均值
+			log(x) 对数
+			arrange(n) 
+			
+		theano的shared是为了GPU
+		theano.function
+			declare symbolic variable
+			build symbolic expression
+			compile function
+			print
+		T.nnet.softmax 输入是个向量
+		T.neq
+		
+		
+spark
+mahout
+	Mahout
+	Mahout是一个广为人知的开源项目，它是Apache Software旗下的一个开源项目，提供了众多的机器学习经典算法的实现，旨在帮助开发人员更加方便快捷地创建智能应用程序。Mahout内包含了聚类、分类、推荐等很多经典算法，并且提供了很方便的云服务的接口。
+
+MLlib
+	MLlib是Apache自己的Spark和Hadoop机器学习库，它被设计用于大规模高速度地执行MLlib所包含的大部分常见机器学习算法。MLlib是基于Java开发的项目，同时可以方便地与Python等语言对接。用户可以自己设计针对MLlib编写代码，这是很具有个性化的设计。
+libsvm
+liblinear
+Scikit-learn
+
+cuda-convnet: 脑回神经网络的高性能 C++/CUDA 软件实施
+Theano: 
+Torch7: 用于机器学习算法的科学计算架构 
+cuBLAS: GPU 加速版本的完整标准 BLAS 库
+
+cxxnet: 神经网络工具包
+
+```
+mxnet
+	module
+	initializer
+	metric
+	optimizer
+		Optimizer
+		SGD
+		DCASGD
+		NAG
+		SGLD
+		ccSGD
+		Adam
+		AdaGrad
+		RMSProp
+		AdaDelta
+		Test
+		create
+		Updater
+	model
+		BatchEndParam
+		save_checkpoint
+		load_checkpoint
+		FeedForward
+	symbol
+		Symbol
+			bind
+		Variable
+		Group
+		
+		mxnet.symbol.Convolution
+		mxnet.symbol.SVMOutput
+		mxnet.symbol.SequenceMask
+		mxnet.symbol.SequenceReverse
+		mxnet.symbol.SliceChannel
+		mxnet.symbol.Softmax
+		mxnet.symbol.SoftmaxActivation
+		mxnet.symbol.SoftmaxOutput
+		mxnet.symbol.SpatialTransformer
+		mxnet.symbol.SwapAxis
+		mxnet.symbol.UpSampling
+	executor
+		Executor
+			forward
+			backward
+			set_monitor_callback
+			arg_dict
+			grad_dict
+			aux_dict
+			output_dict
+			copy_params_from
+			reshape
+	test_utils
+		default_context
+	io
+		DataDesc
+		DataBatch
+		DataIter
+		ResizeIter
+		PrefetchingIter
+		NDArrayIter
+		MXDataIter
+		CSVIter
+		ImageRecordIter
+		ImageRecordUInt8Iter
+		MNISTIter
+	ndarray
+		waitall
+		NDArray
+		onehot_encode
+		empty
+		add
+		subtract
+		multiply
+		concatenate
+		arange
+		load
+		Convolution
+		uniform
+	random
+		seed
+	context
+		Context
+		cpu
+		gpu
+		current_context
+	kvstore
+		KVStore
+		create
+	
+	[<NDArray 100x10 @cpu(0)>, <NDArray 100 @cpu(0)>]
+	
+	<type 'numpy.ndarray'> 2 <class 'mxnet.ndarray.NDArray'>
+		mx.nd.array(x)
+	<class 'mxnet.ndarray.NDArray'> 2 <type 'numpy.ndarray'>
+		x.asnumpy()
+		
+	x[<type 'numpy.ndarray'>, <type 'numpy.ndarray'>] -= 1.0
+		相当于zip
+	Computer Vision
+	Natural Language
+		softmax
+		CNN
+		RNN
+		LSTM
+		VAE
+		GAN
+```
+	
+```
+nlpir
+	pynlpir.open(data_dir=nlpir.PACKAGE_DIR, encoding=ENCODING, encoding_errors=ENCODING_ERRORS, license_code=None)
+	pynlpir.close()
+	pynlpir.segment(s, pos_tagging=True, pos_names='parent', pos_english=True)
+	pynlpir.get_key_words(s, max_words=50, weighted=False)
+	pynlpir.nlpir
+		pynlpir.nlpir.get_func(name, argtypes=None, restype=c_int, lib=libNLPIR)
+		pynlpir.nlpir.Init(data_dir, encoding=GBK_CODE, license_code=None)
+		pynlpir.nlpir.Exit()
+		pynlpir.nlpir.ParagraphProcess(s, pos_tagging=True)
+		pynlpir.nlpir.ParagraphProcessA(s, size_pointer, user_dict=True)
+		pynlpir.nlpir.ImportUserDict(filename)
+		pynlpir.nlpir.AddUserWord(word)
+		pynlpir.nlpir.FileProcess(source_filename, result_filename, pos_tagging=True)
+		pynlpir.nlpir.GetKeyWords(s, max_words=50, weighted=False)
+		pynlpir.nlpir.GetFileKeyWords(filename, max_words=50, weighted=False)
+		pynlpir.nlpir.GetNewWords(s, max_words=50, weighted=False)
+		pynlpir.nlpir.GetFileNewWords(filename, max_words=50, weighted=False)
+		pynlpir.nlpir.FingerPrint(s)
+		pynlpir.nlpir.SetPOSmap(pos_map)
+	pynlpir.pos_map
+```
+	
+
 
 
 
