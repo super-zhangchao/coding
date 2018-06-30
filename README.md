@@ -239,7 +239,7 @@ mac
 ```
 
 ```markdown
-* markdown
+markdown
 ```
 
 
