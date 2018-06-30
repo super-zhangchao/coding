@@ -313,29 +313,31 @@ numpy
 
 caffe
 	用于脑回神经网络算法的架构
-theano
-	用于定义、优化以及评估数学公式的 Python 库
-	张量 标量 向量 矩阵 
-	theano安装
-		安装Anaconda
-		安装mingw
-		安装theano
-	theano学习
-		0阶张量叫标量(scarlar)；1阶张量叫向量(vector)；2阶张量叫矩阵(matrix)
-		lscalar int64
-		theano.tensor
-			mean 均值
-			log(x) 对数
-			arrange(n) 
-			
-		theano的shared是为了GPU
-		theano.function
-			declare symbolic variable
-			build symbolic expression
-			compile function
-			print
-		T.nnet.softmax 输入是个向量
-		T.neq
+```
+    theano
+    用于定义、优化以及评估数学公式的 Python 库
+    张量 标量 向量 矩阵 
+    theano安装
+        安装Anaconda
+        安装mingw
+        安装theano
+    theano学习
+        0阶张量叫标量(scarlar)；1阶张量叫向量(vector)；2阶张量叫矩阵(matrix)
+        lscalar int64
+        theano.tensor
+            mean 均值
+            log(x) 对数
+            arrange(n) 
+
+        theano的shared是为了GPU
+        theano.function
+            declare symbolic variable
+            build symbolic expression
+            compile function
+            print
+        T.nnet.softmax 输入是个向量
+        T.neq
+```
 		
 		
 spark
@@ -467,26 +469,26 @@ mxnet
 	
 ```
 nlpir
-	pynlpir.open(data_dir=nlpir.PACKAGE_DIR, encoding=ENCODING, encoding_errors=ENCODING_ERRORS, license_code=None)
-	pynlpir.close()
-	pynlpir.segment(s, pos_tagging=True, pos_names='parent', pos_english=True)
-	pynlpir.get_key_words(s, max_words=50, weighted=False)
-	pynlpir.nlpir
-		pynlpir.nlpir.get_func(name, argtypes=None, restype=c_int, lib=libNLPIR)
-		pynlpir.nlpir.Init(data_dir, encoding=GBK_CODE, license_code=None)
-		pynlpir.nlpir.Exit()
-		pynlpir.nlpir.ParagraphProcess(s, pos_tagging=True)
-		pynlpir.nlpir.ParagraphProcessA(s, size_pointer, user_dict=True)
-		pynlpir.nlpir.ImportUserDict(filename)
-		pynlpir.nlpir.AddUserWord(word)
-		pynlpir.nlpir.FileProcess(source_filename, result_filename, pos_tagging=True)
-		pynlpir.nlpir.GetKeyWords(s, max_words=50, weighted=False)
-		pynlpir.nlpir.GetFileKeyWords(filename, max_words=50, weighted=False)
-		pynlpir.nlpir.GetNewWords(s, max_words=50, weighted=False)
-		pynlpir.nlpir.GetFileNewWords(filename, max_words=50, weighted=False)
-		pynlpir.nlpir.FingerPrint(s)
-		pynlpir.nlpir.SetPOSmap(pos_map)
-	pynlpir.pos_map
+    pynlpir.open(data_dir=nlpir.PACKAGE_DIR, encoding=ENCODING, encoding_errors=ENCODING_ERRORS, license_code=None)
+    pynlpir.close()
+    pynlpir.segment(s, pos_tagging=True, pos_names='parent', pos_english=True)
+    pynlpir.get_key_words(s, max_words=50, weighted=False)
+    pynlpir.nlpir
+        pynlpir.nlpir.get_func(name, argtypes=None, restype=c_int, lib=libNLPIR)
+        pynlpir.nlpir.Init(data_dir, encoding=GBK_CODE, license_code=None)
+        pynlpir.nlpir.Exit()
+        pynlpir.nlpir.ParagraphProcess(s, pos_tagging=True)
+        pynlpir.nlpir.ParagraphProcessA(s, size_pointer, user_dict=True)
+        pynlpir.nlpir.ImportUserDict(filename)
+        pynlpir.nlpir.AddUserWord(word)
+        pynlpir.nlpir.FileProcess(source_filename, result_filename, pos_tagging=True)
+        pynlpir.nlpir.GetKeyWords(s, max_words=50, weighted=False)
+        pynlpir.nlpir.GetFileKeyWords(filename, max_words=50, weighted=False)
+        pynlpir.nlpir.GetNewWords(s, max_words=50, weighted=False)
+        pynlpir.nlpir.GetFileNewWords(filename, max_words=50, weighted=False)
+        pynlpir.nlpir.FingerPrint(s)
+        pynlpir.nlpir.SetPOSmap(pos_map)
+    pynlpir.pos_map
 ```
 	
 
